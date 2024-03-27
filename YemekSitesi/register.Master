@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="register.master.cs" Inherits="barizmir.register" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, 
+                         initial-scale=1.0">
+    <title id="pageTitle">Barışın İzmir Mutfağı</title>
+    <link rel="stylesheet"
+          href="style.css">
+    <link rel="shortcut icon" href="images/faviconn.png" type="">
+</head>
+ 
+<body>
+    <header>
+        <div class="bg-box">
+            <img src="images/hero-bgg.jpg" alt="">
+        </div>
+        <h1 class="heading">Barizmir.com</h1>
+    </header>
+ <form runat="server">
+    <!-- container div -->
+    <div class="container">
+ 
+        <!-- upper button section to select
+             the login or signup form -->
+        <div class="slider"></div>
+        <div class="btn">
+            <asp:Button CssClass="signup" ID="Button2" runat="server" Text="Kayıt Ol" />
+            <asp:Button CssClass="login" ID="Button1" runat="server" Text="Giriş" OnClick="Button1_Click" />
+        </div>
+ 
+        <div class="form-section">
+ 
+            <!-- login form -->
+            
+ 
+            <!-- signup form -->
+            <div class="signup-box">
+
+                <asp:TextBox CssClass="name ele" ID="TextBox3" placeholder="Adınızı Giriniz" runat="server"></asp:TextBox>
+   
+                <asp:TextBox CssClass="email ele" ID="TextBox4" placeholder="E-Mail Giriniz." TextMode="Email" runat="server"></asp:TextBox>
+ 
+                <asp:TextBox CssClass="password ele" ID="TextBox5" placeholder="Şifre Giriniz." runat="server" TextMode="Password"></asp:TextBox>
+                <asp:Label ID="Label1" ForeColor="#CC3300" Font-Bold="True" runat="server" Text=""></asp:Label>
+                <asp:Button CssClass="clkbtn" ID="Button4" runat="server" Text="Kayıt Ol" OnClick="Button4_Click" />
+            </div>
+            <div class="login-box">
+    <asp:TextBox CssClass="email ele" placeholder="E-Mail Giriniz." ID="TextBox1" runat="server" placehol TextMode="Email" der="E-Mail Giriniz."></asp:TextBox>
+
+    <asp:TextBox CssClass="password ele" placeholder="Şifre Giriniz." ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+
+    <asp:Button CssClass="clkbtn" ID="Button3" runat="server" Text="Giriş" />
+</div>
+        </div>
+    </div>
+     </form>
+    <%--<script src="index.js"></script>--%>
+</body>
+</html>

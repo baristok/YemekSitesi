@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="membership.master.cs" Inherits="barizmir.membership" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/faviconn.png" type="">
+    <title id="pageTitle">Barışın İzmir Mutfağı</title>
+    <link rel="stylesheet" href="membership.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+    <div class="bg-box">
+        <img src="images/hero-bgg.jpg" alt="">
+    </div>
+    <h1 class="heading">Barizmir.com</h1>
+</header>
+    <form runat="server">
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">Hesap Ayarları
+        </h4>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">Ayarla</a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Kayıt Olduğunuz İsim</label>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Adınızı Giriniz"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail Adresiniz</label>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="E-Mail Giriniz." TextMode="Email"></asp:TextBox>
+                                </div>
+                                
+                                
+                                    <div class="form-group">
+                                        <label class="form-label">Eski Şifreniz</label>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Yeni Şifreniz</label>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
+                                    </div>
+
+                                <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#CC3300"></asp:Label>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right mt-3">
+
+            <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Kaydet" OnClick="Button2_Click" />
+
+            <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Vazgeç" OnClick="Button1_Click" />
+        </div>
+    </div>
+        </form>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+</script>
+</body>
+
+</html>
